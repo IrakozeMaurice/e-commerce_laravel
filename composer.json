@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "bumbummen99/shoppingcart": "^4.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.18.35",
         "laravel/tinker": "^2.0"
@@ -31,6 +32,9 @@
         }
     },
     "autoload": {
+        "files": [
+            "app/helpers.php"
+        ],
         "psr-4": {
             "App\\": "app/"
         },

@@ -2,16 +2,12 @@
 
 use Gloudemans\Shoppingcart\Facades\Cart;
 
-// Route::view('/', 'landing-page');
 Route::get('/', 'LandingPageController@index')->name('landing-page');
 
-// Route::view('/shop', 'shop');
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 
-// Route::view('/product', 'product');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
-// Route::view('/cart', 'cart');
 Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
@@ -20,10 +16,7 @@ Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSave
 Route::delete('/saveForLater/{product}', 'SaveForLaterController@destroy')->name('saveForLater.destroy');
 Route::post('/saveForLater/switchToSaveForLater/{product}', 'SaveForLaterController@switchToCart')->name('saveForLater.switchToCart');
 
-Route::get('/empty', function () {
-    Cart::instance('saveForLater')->destroy();
-});
+Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 
-Route::view('/checkout', 'checkout');
-
-Route::view('/thankyou', 'thankyou');
+Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');

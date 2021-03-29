@@ -1,6 +1,6 @@
 <?php
 
-// function FunctionName()
+// function presentPrice($price)
 // {
-
+//     return number_format($price);
 // }

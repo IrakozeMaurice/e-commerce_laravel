@@ -61,15 +61,14 @@
                             </form>
                         </div>
                         <div>
-                            <select class="quantity">
-                                <option selected="">1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <select class="quantity" data-id="{{$item->rowId}}">
+                                @for ($i = 1; $i < 5 + 1; $i++)
+                                    <option {{$item->qty == $i ? 'selected' : ''}}>{{$i}}</option>
+                                @endfor
                             </select>
                         </div>
-                        <div>${{number_format($item->model->price,2,'.',',')}}</div>
+                        {{-- <div>${{number_format($item->model->price,2,'.',',')}}</div> --}}
+                        <div>${{$item->subtotal}}</div>
                     </div>
                 </div> <!-- end cart-table-row -->
                 @endforeach
@@ -96,9 +95,9 @@
                         <span class="cart-totals-total">Total</span>
                     </div>
                     <div class="cart-totals-subtotal">
-                        {{Cart::subtotal()}} <br>
-                        {{Cart::tax()}} <br>
-                        <span class="cart-totals-total">{{Cart::total()}}</span>
+                        ${{Cart::subtotal()}} <br>
+                        ${{Cart::tax()}} <br>
+                        <span class="cart-totals-total">${{Cart::total()}}</span>
                     </div>
                 </div>
             </div> <!-- end cart-totals -->
@@ -137,16 +136,7 @@
                                 <button type="submit" class="cart-options">Move to Cart</button>
                             </form>
                         </div>
-                        {{-- <div>
-                            <select class="quantity">
-                                <option selected="">1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div> --}}
-                        <div>$2499.99</div>
+                        <div>${{$item->subtotal}}</div>
                     </div>
                 </div> <!-- end cart-table-row -->
                 @endforeach
@@ -160,6 +150,29 @@
     </div> <!-- end cart-section -->
 
     @include('partials.might-like')
+@endsection
 
-
+@section('extra-js')
+<script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        (function () {
+            const classname = document.querySelectorAll('.quantity');
+            Array.from(classname).forEach(function(element){
+                element.addEventListener('change',function(){
+                    const id = element.getAttribute('data-id');
+                    axios.patch(`/cart/${id}`,{
+                        quantity: this.value
+                    })
+                    .then(function(response){
+                        // console.log(response);
+                        window.location.href = '{{route('cart.index')}}';
+                    })
+                    .catch(function(error){
+                        // console.log(error);
+                        window.location.href = '{{route('cart.index')}}';
+                    });
+                })
+            });
+        })();
+    </script>
 @endsection

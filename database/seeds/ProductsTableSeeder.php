@@ -86,5 +86,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Lorem ' . $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
             ])->categories()->attach(7);
         }
+
+        Product::whereIn('id', [13, 24, 35, 44, 56, 67, 75, 83, 5, 61, 39, 43, 50])->update(['featured' => true]);
     }
 }

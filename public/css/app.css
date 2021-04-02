@@ -45,7 +45,7 @@ img {
 
 .container {
   margin: auto;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 html,
@@ -182,9 +182,9 @@ table {
 
 body {
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 h1,
@@ -196,12 +196,12 @@ h2,
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 35px;
   line-height: 1.2;
 }
 
 h1.stylish-heading {
-  margin-bottom: 60px;
+  margin-bottom: 45px;
   position: relative;
 }
 
@@ -223,7 +223,7 @@ h1.stylish-heading:after {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .text-center {
@@ -247,7 +247,7 @@ h2 {
 .breadcrumbs {
   background: #F5F5F5;
   border-bottom: 1px solid #CDCDCD;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 
 .breadcrumbs .breadcrumb-separator {
@@ -257,7 +257,7 @@ h2 {
 
 .button {
   border: 1px solid #212121;
-  padding: 12px 40px;
+  padding: 10px 35px;
 }
 
 .button:hover {
@@ -278,7 +278,7 @@ h2 {
 .button-primary {
   background: #3EBFA4;
   color: white !important;
-  padding: 12px 40px;
+  padding: 10px 35px;
 }
 
 .button-primary:hover {
@@ -301,7 +301,7 @@ h2 {
 
 .section-description {
   width: 80%;
-  margin: 44px auto;
+  margin: 40px auto;
 }
 
 .sidebar h3 {
@@ -315,12 +315,12 @@ h2 {
 }
 
 .might-like-section {
-  padding: 40px 0 70px;
+  padding: 25px 0 50px;
   background: #F5F5F5;
 }
 
 .might-like-section h2 {
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .might-like-section .might-like-grid {
@@ -332,7 +332,7 @@ h2 {
 .might-like-section .might-like-product {
   border: 1px solid #979797;
   background: white;
-  padding: 30px 0 20px;
+  padding: 25px 0 15px;
   text-align: center;
 }
 
@@ -353,12 +353,12 @@ form .half-form {
 form button[type=submit] {
   border-style: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
@@ -367,13 +367,13 @@ form button[type=submit] {
 
 .form-group input {
   width: 100%;
-  padding: 12px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 14px;
 }
 
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -453,13 +453,13 @@ header.with-background {
 header.with-background .top-nav {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 20px 0;
   letter-spacing: 1.5px;
 }
 
 header.with-background .top-nav .logo {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 header.with-background .top-nav ul {
@@ -481,25 +481,25 @@ header.with-background .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
-  padding-top: 20px;
-  padding-bottom: 84px;
+  padding-top: 15px;
+  padding-bottom: 74px;
 }
 
 header.with-background .hero .hero-image {
-  padding-left: 60px;
+  padding-left: 40px;
 }
 
 header.with-background .hero h1 {
-  font-size: 52px;
-  margin-top: 50px;
+  font-size: 45px;
+  margin-top: 40px;
 }
 
 header.with-background .hero p {
-  margin: 40px 0 68px;
+  margin: 30px 0 58px;
 }
 
 header.with-background .hero .button {
-  margin-right: 14px;
+  margin-right: 10px;
 }
 
 header {
@@ -509,13 +509,13 @@ header {
 header .top-nav {
   display: flex;
   justify-content: space-between;
-  padding: 30px 0;
-  letter-spacing: 1.5px;
+  padding: 15px 0;
+  letter-spacing: 1.3px;
 }
 
 header .top-nav .logo {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 20px;
   color: #e9e9e9;
 }
 
@@ -524,8 +524,8 @@ header .top-nav ul {
   text-transform: uppercase;
   justify-content: space-between;
   width: 40%;
-  padding-top: 8px;
-  font-weight: 400;
+  padding-top: 5px;
+  font-weight: 300;
 }
 
 header .top-nav ul a {
@@ -542,7 +542,7 @@ header .top-nav ul .cart-count {
   color: #212121;
   line-height: 0;
   border-radius: 50%;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 header .top-nav ul .cart-count span {
@@ -556,7 +556,7 @@ header .top-nav ul .cart-count span {
 footer {
   background: #535353;
   color: #e9e9e9;
-  padding: 40px 0;
+  padding: 30px 0;
 }
 
 .footer-content {
@@ -579,7 +579,7 @@ footer {
 }
 
 .featured-section {
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 .featured-section .products {
@@ -595,7 +595,7 @@ footer {
 .blog-section {
   background: #F5F5F5;
   border-top: 1px solid #CDCDCD;
-  padding: 50px 0;
+  padding: 40px 0;
   grid-area: blog-section;
 }
 
@@ -603,7 +603,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
-  margin: 60px 0 60px;
+  margin: 50px 0 50px;
   grid-template-areas: "blog1 blog2 blog3";
 }
 
@@ -685,14 +685,14 @@ footer {
 }
 
 .cart-section h2 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .cart-section .cart-table-row {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #919191;
-  padding: 14px 0;
+  padding: 10px 0;
 }
 
 .cart-section .cart-table-row:last-child {
@@ -729,6 +729,7 @@ footer {
 
 .cart-section .cart-table-row .cart-table-description {
   color: #919191;
+  font-size: 12px;
 }
 
 .cart-section .cart-table-row .cart-options {
@@ -744,8 +745,8 @@ footer {
 }
 
 .cart-section .cart-totals {
-  margin: 30px 0;
-  padding: 20px;
+  margin: 20px 0;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   background: #F5F5F5;
@@ -764,25 +765,25 @@ footer {
 
 .cart-section .cart-totals .cart-totals-total {
   font-weight: bold;
-  font-size: 22px;
-  line-height: 2;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 .cart-section .cart-buttons {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 h1.checkout-heading {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .checkout-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
-  margin: 40px auto 80px;
+  margin: 30px auto 65px;
 }
 
 .checkout-section .checkout-table-container {
@@ -790,7 +791,7 @@ h1.checkout-heading {
 }
 
 .checkout-section h2 {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .checkout-section .checkout-table-row {
@@ -798,7 +799,7 @@ h1.checkout-heading {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #919191;
-  padding: 14px 0;
+  padding: 12px 0;
 }
 
 .checkout-section .checkout-table-row:last-child {
@@ -838,7 +839,7 @@ h1.checkout-heading {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #919191;
-  padding: 18px 0;
+  padding: 14px 0;
   line-height: 2;
 }
 
@@ -859,7 +860,7 @@ h1.checkout-heading {
 
 .checkout-section .have-code-container {
   border: 1px solid #919191;
-  padding: 16px;
+  padding: 12px;
 }
 
 .checkout-section .have-code-container form {
@@ -869,15 +870,15 @@ h1.checkout-heading {
 
 .checkout-section .have-code-container input[type=text] {
   width: 70%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 6px;
+  font-size: 14px;
 }
 
 .checkout-section .have-code-container input[type=submit] {
   background: white;
   border: 1px solid #919191;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .checkout-section .have-code-container input[type=submit]:hover {

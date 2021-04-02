@@ -1,5 +1,5 @@
 h1.checkout-heading {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .checkout-section {
@@ -7,19 +7,19 @@ h1.checkout-heading {
     grid-template-columns: 1fr 1fr;
     // grid-column-gap: 10px;
     grid-gap: 30px;
-    margin: 40px auto 80px;
+    margin: 30px auto 65px;
     .checkout-table-container {
         margin-left: 124px;
     }
     h2 {
-        margin-bottom: 28px;
+        margin-bottom: 22px;
     }
     .checkout-table-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-top: 1px solid $text-color-light;
-        padding: 14px 0;
+        padding: 12px 0;
         &:last-child {
             border-bottom: 1px solid $text-color-light;
         }
@@ -55,7 +55,7 @@ h1.checkout-heading {
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid $text-color-light;
-        padding: 18px 0;
+        padding: 14px 0;
         line-height: 2;
         .checkout-totals-right {
             text-align: right;
@@ -72,21 +72,21 @@ h1.checkout-heading {
     }
     .have-code-container {
         border: 1px solid $text-color-light;
-        padding: 16px;
+        padding: 12px;
         form {
             display: flex;
             justify-content: space-between;
         }
         input[type="text"] {
             width: 70%;
-            padding: 10px;
-            font-size: 16px;
+            padding: 6px;
+            font-size: 14px;
         }
         input[type="submit"] {
             background: white;
             border: 1px solid $text-color-light;
-            padding-top: 8px;
-            padding-bottom: 8px;
+            padding-top: 6px;
+            padding-bottom: 6px;
             &:hover {
                 background: $text-color;
             }

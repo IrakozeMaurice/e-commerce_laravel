@@ -1,6 +1,7 @@
 <?php
 
-use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Facades\Voyager;
 
 Route::get('/', 'LandingPageController@index')->name('landing-page');
 
@@ -24,3 +25,8 @@ Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
 Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 
 Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

@@ -124,7 +124,7 @@
                     <div class="checkout-table">
                         <div class="checkout-table-row">
                             <div class="checkout-table-row-left">
-                                <img src="{{ asset('img/products/' . $item->model->slug . '.jpg') }}" alt="item"
+                                <img src="{{ asset('storage/' . $item->model->image) }}" alt="item"
                                     class="checkout-table-img">
                                 <div class="checkout-item-details">
                                     <div class="checkout-table-item">{{ $item->model->name }}</div>

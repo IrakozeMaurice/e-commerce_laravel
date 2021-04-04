@@ -462,13 +462,6 @@ header.with-background .top-nav .logo {
   font-size: 20px;
 }
 
-header.with-background .top-nav ul {
-  display: flex;
-  text-transform: uppercase;
-  justify-content: space-between;
-  width: 40%;
-}
-
 header.with-background .top-nav ul a {
   color: #e9e9e9;
 }
@@ -517,15 +510,22 @@ header .top-nav .logo {
   font-weight: bold;
   font-size: 20px;
   color: #e9e9e9;
+  margin-right: 45px;
 }
 
 header .top-nav ul {
   display: flex;
   text-transform: uppercase;
-  justify-content: space-between;
-  width: 40%;
   padding-top: 5px;
   font-weight: 300;
+}
+
+header .top-nav ul li {
+  margin-right: 20px;
+}
+
+header .top-nav ul li:last-child {
+  margin-right: 0;
 }
 
 header .top-nav ul a {
@@ -551,6 +551,15 @@ header .top-nav ul .cart-count span {
   padding-bottom: 50%;
   margin-left: 6px;
   margin-right: 6px;
+}
+
+header .top-nav-left {
+  display: flex;
+}
+
+header .top-nav-right {
+  display: flex;
+  align-items: center;
 }
 
 footer {

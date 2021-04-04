@@ -34,7 +34,9 @@
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" value="" required>
+                        {{-- <input type="email" class="form-control" id="email" name="email" value="" required> --}}
+                        <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}"
+                            readonly>
                     </div>
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -115,9 +117,6 @@
 
                 </form>
             </div>
-
-
-
             <div class="checkout-table-container">
                 <h2>Your Order</h2>
                 @foreach (Cart::content() as $item)

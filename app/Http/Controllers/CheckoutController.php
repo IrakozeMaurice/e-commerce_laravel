@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CheckoutRequest;
 use Cartalyst\Stripe\Exception\CardErrorException;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -21,17 +22,8 @@ class CheckoutController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(CheckoutRequest $request)
     {
-        $request->validate([
-            'email' => 'required|email',
-            'name' => 'required',
-            'address' => 'required',
-            'city' => 'required',
-            'province' => 'required',
-            'postalcode' => 'required',
-            'phone' => 'required',
-        ]);
 
         $contents = Cart::content()->map(function ($item) {
             return $item->model->slug . ', ' . $item->qty;

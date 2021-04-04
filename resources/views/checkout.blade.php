@@ -20,7 +20,7 @@
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                        <li>{!! $error !!}</li>
                     @endforeach
                 </ul>
             </div>
@@ -34,9 +34,12 @@
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        {{-- <input type="email" class="form-control" id="email" name="email" value="" required> --}}
-                        <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}"
-                            readonly>
+                        @if (auth()->check())
+                            <input type="email" class="form-control" id="email" name="email"
+                                value="{{ auth()->user()->email }}" readonly>
+                        @else
+                            <input type="email" class="form-control" id="email" name="email" value="" required>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label for="name">Name</label>
